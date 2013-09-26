@@ -5,5 +5,13 @@
 //
 
 #ifdef __OBJC__
+    #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+
+    #define EXP_SHORTHAND
+
+    #import <Specta/Specta.h>
+    #import <Expecta/Expecta.h>
+
 #endif

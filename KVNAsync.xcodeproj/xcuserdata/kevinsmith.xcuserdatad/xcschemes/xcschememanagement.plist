@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>KVNPromise.xcscheme</key>
+		<key>KVNAsync.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +12,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9E02C75B17CF025400F14D13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9E6E543B17BD50C400188C53</key>
 		<dict>
 			<key>primary</key>
