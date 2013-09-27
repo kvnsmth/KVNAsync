@@ -107,13 +107,12 @@
 		9E02C76117CF025400F14D13 /* KVNAsyncTests */ = {
 			isa = PBXGroup;
 			children = (
+				9E02C76217CF025400F14D13 /* Supporting Files */,
 				9E02C76717CF025400F14D13 /* KVNPromiseSpecs.m */,
 				9E4CD67917D1066400C2CDD6 /* KVNFutureSpecs.m */,
-				9E02C76217CF025400F14D13 /* Supporting Files */,
 				9E1F338A17E9F953005FB027 /* KVNDispatchSpecs.m */,
 			);
-			name = KVNAsyncTests;
-			path = KVNAsyncOCTests;
+			path = KVNAsyncTests;
 			sourceTree = "<group>";
 		};
 		9E02C76217CF025400F14D13 /* Supporting Files */ = {
