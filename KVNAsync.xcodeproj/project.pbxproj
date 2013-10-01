@@ -16,12 +16,11 @@
 		9E1F338B17E9F953005FB027 /* KVNDispatchSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1F338A17E9F953005FB027 /* KVNDispatchSpecs.m */; };
 		9E4CD67A17D1066400C2CDD6 /* KVNFutureSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4CD67917D1066400C2CDD6 /* KVNFutureSpecs.m */; };
 		9E6E544017BD50C400188C53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6E543F17BD50C400188C53 /* Foundation.framework */; };
-		9E6E544517BD50C400188C53 /* KVNPromise.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E6E544417BD50C400188C53 /* KVNPromise.h */; };
 		9E6E544717BD50C400188C53 /* KVNPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E544617BD50C400188C53 /* KVNPromise.m */; };
 		9E6E549D17C2785100188C53 /* KVNFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6E549C17C2785100188C53 /* KVNFuture.m */; };
 		9E9660BB17C50C8700D87178 /* KVNDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9660BA17C50C8700D87178 /* KVNDispatch.m */; };
 		9E9660C217C52D1300D87178 /* KVNDispatchContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9660C117C52D1300D87178 /* KVNDispatchContext.m */; };
-		F14ECBCA55FA48C08493589A /* libPods-KVNAsyncOCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D761ECC736E44E57B0E7909A /* libPods-KVNAsyncOCTests.a */; };
+		F14ECBCA55FA48C08493589A /* libPods-KVNAsyncTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D761ECC736E44E57B0E7909A /* libPods-KVNAsyncTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				9E6E544517BD50C400188C53 /* KVNPromise.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +74,7 @@
 		9E9660C117C52D1300D87178 /* KVNDispatchContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNDispatchContext.m; sourceTree = "<group>"; };
 		9EB4514017DE3DEC009443C7 /* KVNAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNAsync.h; sourceTree = "<group>"; };
 		B541FCE17F3044A0BEF09569 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D761ECC736E44E57B0E7909A /* libPods-KVNAsyncOCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KVNAsyncOCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D761ECC736E44E57B0E7909A /* libPods-KVNAsyncTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KVNAsyncTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD884B8750014B158344512B /* libPods-KVNAsyncTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KVNAsyncTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14ECBCA55FA48C08493589A /* libPods-KVNAsyncOCTests.a in Frameworks */,
+				F14ECBCA55FA48C08493589A /* libPods-KVNAsyncTests.a in Frameworks */,
 				9E02C75E17CF025400F14D13 /* SenTestingKit.framework in Frameworks */,
 				9E02C76017CF025400F14D13 /* UIKit.framework in Frameworks */,
 				9E02C75F17CF025400F14D13 /* Foundation.framework in Frameworks */,
@@ -162,7 +160,7 @@
 				9E02C75D17CF025400F14D13 /* SenTestingKit.framework */,
 				9E6E545017BD50C400188C53 /* UIKit.framework */,
 				FD884B8750014B158344512B /* libPods-KVNAsyncTests.a */,
-				D761ECC736E44E57B0E7909A /* libPods-KVNAsyncOCTests.a */,
+				D761ECC736E44E57B0E7909A /* libPods-KVNAsyncTests.a */,
 				B541FCE17F3044A0BEF09569 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -247,7 +245,7 @@
 				9E02C76B17CF025400F14D13 /* PBXTargetDependency */,
 			);
 			name = KVNAsyncTests;
-			productName = KVNAsyncOCTests;
+			productName = KVNAsyncTests;
 			productReference = 9E02C75C17CF025400F14D13 /* KVNAsyncTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -321,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-KVNAsyncOCTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-KVNAsyncTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91117FA07FC1431F95E7B841 /* Check Pods Manifest.lock */ = {
@@ -425,12 +423,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KVNAsyncOCTests/KVNAsyncTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "KVNAsyncTests/KVNAsyncTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "KVNAsyncOCTests/KVNAsyncTests-Info.plist";
+				INFOPLIST_FILE = "KVNAsyncTests/KVNAsyncTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -446,8 +444,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KVNAsyncOCTests/KVNAsyncTests-Prefix.pch";
-				INFOPLIST_FILE = "KVNAsyncOCTests/KVNAsyncTests-Info.plist";
+				GCC_PREFIX_HEADER = "KVNAsyncTests/KVNAsyncTests-Prefix.pch";
+				INFOPLIST_FILE = "KVNAsyncTests/KVNAsyncTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
