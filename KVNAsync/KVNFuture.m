@@ -96,18 +96,22 @@
     NSMutableArray *values = [NSMutableArray array];
     NSMutableArray *errors = [NSMutableArray array];
     NSUInteger index = 0;
+
+    dispatch_queue_t serialAccessQueue = dispatch_queue_create("cc.kevinsmith.KVNAsync.allFutureAccessQueue", DISPATCH_QUEUE_SERIAL);
     for (KVNFuture *future in futures) {
         [values addObject:[NSNull null]]; // fill value array with placeholders
         
         dispatch_group_enter(all_group);
         [future onCompletion:^(id value, NSError *error) {
-            if (error) {
-                [errors addObject:error];
-            } else {
-                id realValue = value ?: [NSNull null];
-                [values replaceObjectAtIndex:index withObject:realValue];
-            }
-            dispatch_group_leave(all_group);
+            dispatch_async(serialAccessQueue, ^{
+                if (error) {
+                    [errors addObject:error];
+                } else {
+                    id realValue = value ?: [NSNull null];
+                    [values replaceObjectAtIndex:index withObject:realValue];
+                }
+                dispatch_group_leave(all_group);
+            });
         }];
         index++;
     }
@@ -132,7 +136,7 @@
 
 + (KVNFuture *)first:(id<NSFastEnumeration>)futures {
     KVNPromise *firstPromise = [KVNPromise promise];
-    dispatch_queue_t serialAccessQueue = dispatch_queue_create("cc.kevinsmith.firstPromiseAccessQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t serialAccessQueue = dispatch_queue_create("cc.kevinsmith.KVNAsync.firstFutureAccessQueue", DISPATCH_QUEUE_SERIAL);
 
     for (KVNFuture *future in futures) {
         [future onCompletion:^(id value, NSError *error) {
